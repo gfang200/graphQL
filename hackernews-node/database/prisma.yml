@@ -1,0 +1,14 @@
+# HTTP endpoint for Prisma API
+#endpoint: ''
+endpoint: https://us1.prisma.sh/george-007839/hackernews/dev
+
+# Points to the file with data model
+datamodel: datamodel.graphql
+
+hooks:
+  post-deploy:
+    - graphql get-schema --project database
+
+# JWT Secret
+secret: mysecret123
+
